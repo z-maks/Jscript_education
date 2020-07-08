@@ -1,0 +1,22 @@
+// Task #1
+let num_1 = 5; //parseInt(prompt("Enter number #1"));
+let num_2 = 8; //parseInt(prompt("Enter number #2"));
+
+num_2 += num_1;
+
+alert(`The sum of two entered numbers is ${num_2}`);
+
+// Task#2
+let Name = 'Jane'; //(prompt("Enter your name"));
+alert(`Hello, ${Name} !`);
+
+// Task #3
+let exmp1 = 5;
+alert(exmp1 % 2);
+
+let exmp2 = 80;
+alert(exmp2 % 2);
+
+// Task #4
+let floatnumber = parseFloat(2.355);
+alert('Before ' + Math.trunc(floatnumber) + ' / After ' + (floatnumber % 2)); 

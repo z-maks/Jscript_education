@@ -1,0 +1,59 @@
+'use strict';
+//Task #1
+
+let number;
+
+do { number = +prompt('enter a number please'); }
+while (isNaN(number));
+
+if (number % 2 > 0) {
+    alert(`The number ${number} is odd`)
+} else {
+    alert(`The number  ${number} is even`)
+}
+
+//Task #2
+let age;
+
+do { age = +prompt('enter your age please'); }
+while (isNaN(age));
+
+if (age >= 14 && age <= 90) {
+    alert('You are in, welcome!')
+} else {
+    alert('Your are not in the scope, sorry :()')
+}
+
+if (!(age >= 14 && age <= 90)) {
+    alert('Your are not in the scope, sorry :()')
+} else {
+    alert('You are in, welcome!')
+}
+
+//Task #3
+
+for (let sequence = 0; sequence <= 10; sequence += 2) {
+    console.log(sequence)
+}
+
+//Task #4
+
+for (let sequence = 1; sequence <= 9; sequence += 2) {
+    console.log(sequence)
+}
+
+//Task #5
+let UserName = '', UserPass = '';  //.toLocaleUpperCase()
+
+UserName = prompt('Login:');
+
+if (UserName == null) {
+    alert('Canceled');
+} else if (UserName == 'Admin') {
+    UserPass = prompt('Password:');
+    if (UserPass == null) {
+        alert('Canceled');
+    } else if (UserPass == 'TheMaster') {
+        alert('Welcome!');
+    } else { alert('Wrong password!'); }
+} else { alert('I don`t know you!'); }

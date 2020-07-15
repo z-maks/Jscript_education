@@ -1,0 +1,64 @@
+'use strict';
+//Task #1
+let x, n, result;
+
+do { x = +prompt('enter value for x, please') }
+while (isNaN(x));
+
+do { n = +prompt('enter value for n, please') }
+while (isNaN(n));
+
+result = x ** n;
+alert(`The result is ${result} for '**' method`);
+
+result = 1;
+for (let index = 0; index < n; index++) {
+    result *= x;
+}
+alert(`The result is ${result} for 'loop' method`);
+
+//Task #2
+
+function getMinimal(a, b) {
+    if (a < b) {
+        alert(`minimal number is \'a\' = ${a}`)
+    } else {
+        alert(`minimal number is \'b\' = ${b}`)
+    }
+}
+
+getMinimal(+prompt('enter \'a\' please'), +prompt('enter \'b\' please'))
+
+//Task #3
+
+let getMaximum = (a, b) => {
+    if (a > b) {
+        alert(`maximum number is \'a\' = ${a}`)
+    } else {
+        alert(`maximum number is \'b\' = ${b}`)
+    }
+}
+
+getMaximum(+prompt('enter \'a\' please'), +prompt('enter \'b\' please'))
+
+// Task #4
+
+let ask = (question, yes, no) => {
+    if (confirm(question)) yes()
+    else no();
+}
+
+ask(
+    "Do you agree?",
+    yes => alert("You agreed."),
+    no => alert("You canceled the execution."))
+
+// Task 5
+
+
+function log(message, logger = console.log) {
+
+    logger(message);
+}
+
+log('Hello, Pitter!'); //console.warn

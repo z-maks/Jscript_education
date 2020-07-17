@@ -1,0 +1,59 @@
+'use strict';
+//Task #1 ************************************
+
+//code represent wrong approach for coping objects.
+//new value will be added into same array, only reference to first array is assigned to variable,
+//so length of the array is 4.
+
+//Task #2 ************************************
+
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.trunc((styles.length - 1) / 2)] = 'Classics';
+styles.splice(0, 0, 'Rap', 'Reggae');
+
+//Task #3 ************************************
+
+function getAverageAge(str) {
+
+    let array = str.split(',');
+    return array.reduce((collector, item) => collector += +item, 0);
+}
+
+let intAvarage = getAverageAge('15, 60, 45, 30');
+
+// Task #4 ************************************
+
+function filterRange(arr2, min, max) {
+
+    return arr2.filter(item => (item >= min && item <= max));
+}
+
+let a = 1, b = 4;
+let arr = [5, 3, 8, 1, 2, 19, 0];
+alert(filterRange(arr, (a < b) ? a : b, (a < b) ? b : a)); // (matching values)
+alert(arr); //(not modified)
+
+
+// Task #5 ************************************
+function extractCurrencyValue(inDollars) {
+
+    // var1
+    let arr = inDollars.split('');
+    alert(arr.reduce((collector, item) => collector += ((item == '$') ? '' : item), ''));
+
+    //var2
+    alert(arr.filter(item => item !== '$').join(''));
+
+    // var3
+    return inDollars.substring(inDollars.indexOf('$') + 1);
+};
+
+alert(extractCurrencyValue('$3500'));
+
+// Task #6 ************************************
+function ucFirst(name) {
+    return name[0].toUpperCase() + name.substring(1);
+}
+
+alert(ucFirst("john"));
